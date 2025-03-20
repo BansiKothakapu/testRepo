@@ -1,5 +1,10 @@
 pipeline {
-  agent { dockerfile true }
+  agent { 
+            dockerfile {
+                filename 'Dockerfile'
+                label 'linux-1'
+            } 
+        }
   stages {
     stage('Test') {
       steps {
